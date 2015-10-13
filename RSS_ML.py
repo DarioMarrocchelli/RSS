@@ -90,8 +90,6 @@ day = features_test[:,1]
 data2 = pd.DataFrame(dict(day=day, index=index, pred=pred))
 data2.columns = ['DayOfWeek', 'Store', 'Sales']
 
-#print(data2.groupby('Date')['Sales'].mean())
-
 y_2 = data2.groupby('Store')['Sales'].mean()
 x_2 = data2.groupby('Store')['Store'].mean()
 plt.scatter(x, y, color = 'red')
